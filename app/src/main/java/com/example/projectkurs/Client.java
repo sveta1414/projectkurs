@@ -9,7 +9,10 @@ public class Client {
     private static Retrofit retrofit;
 
     private Client(){
-        retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
+        retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
     }
 
     public static synchronized Client getInstance(){

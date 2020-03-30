@@ -1,26 +1,28 @@
 package com.example.projectkurs.Help;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
-import javax.xml.transform.Source;
 
 public class Articles {
     @SerializedName("source")
-    @Expose
     private Source source;
+
     @SerializedName("author")
-    @Expose
     private String author;
+
     @SerializedName("description")
-    @Expose
     private String description;
+
     @SerializedName("title")
-    @Expose
     private String title;
+
     @SerializedName("url")
-    @Expose
     private String url;
+
+    @SerializedName("urlToImage")
+    private String urlToImage;
+
+    @SerializedName("publishedAt")
+    private String publishedAt;
 
     public Source getSource() {
         return source;
@@ -77,12 +79,4 @@ public class Articles {
     public void setPublishedAt(String publishedAt) {
         this.publishedAt = publishedAt;
     }
-
-    @SerializedName("urlToImage")
-    @Expose
-    private String urlToImage;
-    @SerializedName("publishedAt")
-    @Expose
-    private String publishedAt;
-
 }

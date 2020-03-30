@@ -1,17 +1,18 @@
 package com.example.projectkurs.Help;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
 public class Headlines {
     @SerializedName("status")
-    @Expose
     private String status;
+
     @SerializedName("totalResults")
-    @Expose
     private String totalResults;
+
+    @SerializedName("articles")
+    private List<Articles> articles;
 
     public String getStatus() {
         return status;
@@ -36,9 +37,4 @@ public class Headlines {
     public void setArticles(List<Articles> articles) {
         this.articles = articles;
     }
-
-    @SerializedName("articles")
-    @Expose
-    private List<Articles>articles;
-
 }
